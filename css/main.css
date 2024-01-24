@@ -755,6 +755,7 @@ section {
   top: 0;
   right: 0;
   object-fit: contain;
+  border-radius: 0 20px 20px 0;
   }
 
 /* services */
