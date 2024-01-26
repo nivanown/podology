@@ -132,3 +132,9 @@ directionTabs.forEach(tab => {
     target.classList.add('active');
   });
 });
+
+/*- gl-accordion -*/
+$('.gl-accordion__top-panel').click(function() {
+  $(this).next().slideToggle(200);
+  $(this).toggleClass('show', 200);
+});
