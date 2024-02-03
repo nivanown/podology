@@ -133,6 +133,24 @@ directionTabs.forEach(tab => {
   });
 });
 
+/*- tabs_v2 -*/
+const tabsNav = document.querySelectorAll('.gl-tabs-nav [data-tab-target]');
+const tabsContent = document.querySelectorAll('.gl-tabs-content [data-tab-content]');
+
+tabsNav.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabsContent.forEach(tabsItem => {
+      tabsItem.classList.remove('active');
+    });
+    tabsNav.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    target.classList.add('active');
+  });
+});
+
 /*- gl-accordion -*/
 $('.gl-accordion__top-panel').click(function() {
   $(this).next().slideToggle(200);
@@ -179,4 +197,41 @@ $(window).scroll(function(){
       .parent()
       .addClass('active');
   }
+});
+
+/*- type-file -*/
+var $file = $('.file-input input'),
+    $label = $file.next('.file-input label'),
+    $labelText = $label.find('.file-input__text'),
+    $labelRemove = $('.file-input__close-btn'),
+    labelDefault = $labelText.text();
+
+$file.on('change', function(event){
+  var fileName = $file.val().split( '\\' ).pop();
+  if( fileName ){
+    console.log($file)
+    $labelText.text(fileName);
+    $labelRemove.show();
+  }else{
+    $labelText.text(labelDefault);
+    $labelRemove.hide();
+  }
+});
+
+$labelRemove.on('click', function(event){
+  $file.val("");
+  $labelText.text(labelDefault);
+  $labelRemove.hide();
+});
+
+/*- days-slider -*/
+var swiper = new Swiper('.days-slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  speed: 500,
+  loop: false,
+  navigation: {
+    nextEl: '.days-slider .swiper-button-next',
+    prevEl: '.days-slider .swiper-button-prev',
+  },
 });
