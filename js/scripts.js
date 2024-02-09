@@ -235,3 +235,159 @@ var swiper = new Swiper('.days-slider', {
     prevEl: '.days-slider .swiper-button-prev',
   },
 });
+
+/*- filter-accordion -*/
+document.addEventListener('DOMContentLoaded', function () {
+  const panels = document.querySelectorAll('.filter-accordion__item');
+
+  panels.forEach(panel => {
+    panel.classList.add('active');
+  });
+
+  const panelHeaders = document.querySelectorAll('.filter-accordion__top-panel');
+
+  panelHeaders.forEach(header => {
+    header.addEventListener('click', function () {
+      const panel = this.parentElement;
+      panel.classList.toggle('active');
+    });
+  });
+});
+
+/*- price -*/
+let priceGap = 1000;
+
+document.querySelectorAll(".price-slider").forEach((container) => {
+const rangeInput = container.querySelectorAll(".range-input input"),
+priceInput = container.querySelectorAll(".price-input input"),
+range = container.querySelector(".slider .progress");
+
+priceInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minPrice = parseInt(priceInput[0].value),
+    maxPrice = parseInt(priceInput[1].value);
+
+    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+      if (e.target.className === "input-min") {
+        rangeInput[0].value = minPrice;
+        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+      } else {
+        rangeInput[1].value = maxPrice;
+        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+      }
+    }
+  });
+})
+
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+    if (maxVal - minVal < priceGap) {
+      if (e.target.className === "range-min") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      }
+    });
+  });
+});
+
+/*- scrollable-block -*/
+var swiper = new Swiper(".scrollable-block", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  freeMode: true,
+  scrollbar: {
+    el: ".scrollable-block .swiper-scrollbar",
+  },
+  mousewheel: true,
+});
+
+/*- filter-accordion__settings -*/
+var news = 5;
+var shownews = "Показать все";
+var hidenews = "Скрыть";
+
+$(".filter-accordion__settings").each(function() {
+  var $currentBlock = $(this);
+  var $moreLink = $currentBlock.find(".more-link");
+  var $listItems = $currentBlock.find("li");
+
+  $moreLink.html(shownews);
+  $listItems.not(":lt(" + news + ")").hide();
+
+  if ($listItems.length > news) {
+    $moreLink.show();
+  } else {
+    $moreLink.hide();
+  }
+
+  $moreLink.click(function(e) {
+    e.preventDefault();
+
+    if ($listItems.eq(news).is(":hidden")) {
+      $listItems.filter(":hidden").show();
+      $moreLink.html(hidenews);
+    } else {
+      $listItems.not(":lt(" + news + ")").hide();
+      $moreLink.html(shownews);
+    }
+  });
+});
+
+/*- counter -*/
+class Counter {
+  constructor(container) {
+    this.container = container;
+    this.counterElement = this.container.querySelector('.counter__input');
+    this.decrementButton = this.container.querySelector('.counter__less');
+    this.incrementButton = this.container.querySelector('.counter__more');
+    
+    this.counterValue = 1;
+    
+    this.updateCounter();
+    
+    this.decrementButton.addEventListener('click', () => {
+      this.decrement();
+    });
+
+    this.incrementButton.addEventListener('click', () => {
+      this.increment();
+    });
+  }
+
+  updateCounter() {
+    this.counterElement.value = this.counterValue;
+  }
+
+  decrement() {
+    if (this.counterValue > 0) {
+      this.counterValue--;
+      this.updateCounter();
+    }
+  }
+
+  increment() {
+    this.counterValue++;
+    this.updateCounter();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const counterContainers = document.querySelectorAll('.counter');
+
+  counterContainers.forEach(container => {
+    new Counter(container);
+  });
+});
+
+
+
