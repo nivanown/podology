@@ -124,131 +124,118 @@
                                 <a href="#">Главная</a>/
                             </li>
                             <li>
-                                <span>Оформление заказа</span>
+                                <span>Личный кабинет</span>
                             </li>
                         </ul>
                     </nav>
-                    <h1 class="big-title">Оформление заказа</h1>
-                    <div class="shopping-cart">
-                        <div class="shopping-cart__content">
-                            <div class="customer-data">
-                                <form>
-                                    <div class="customer-data__item">
-                                        <h3 class="customer-data__title">Пациент</h3>
-                                        <div class="fields-wrap">
-                                            <div class="fields-wrap__item fields-wrap__item_size-sm">
-                                                <div class="gl-field">
-                                                    <label for="customer-surname">Фамилия</label>
-                                                    <input id="customer-surname" type="text" value="Иванов">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-sm">
-                                                <div class="gl-field">
-                                                    <label for="customer-name">Имя</label>
-                                                    <input id="customer-name" type="text" value="Иван">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-sm">
-                                                <div class="gl-field">
-                                                    <label for="customer-patronymic">Отчество</label>
-                                                    <input id="customer-patronymic" type="text" value="Иванович">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field gl-field_date-icon">
-                                                    <label for="customer-date-birth">Дата рождения</label>
-                                                    <input id="customer-date-birth" type="text" value="10.06.1991">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gender-panel">
-                                                    <div class="gender-panel__item">
-                                                        <input id="man" type="radio" name="gender" checked="checked">
-                                                        <label for="man">Мужчина</label>
-                                                    </div>
-                                                    <div class="gender-panel__item">
-                                                        <input id="woman" type="radio" name="gender">
-                                                        <label for="woman">Женщина</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customer-data__item">
-                                        <h3 class="customer-data__title">Паспортные данные</h3>
-                                        <div class="fields-wrap">
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-series">Серия</label>
-                                                    <input id="customer-series" type="text" value="4988">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-number">Номер</label>
-                                                    <input id="customer-number" type="text" value="534759">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-date-issue">Когда выдан</label>
-                                                    <input id="customer-date-issue" class="date-input" maxlength="10" type="text" value="13.07.2010">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-issued-whom">Кем выдан</label>
-                                                    <input id="customer-issued-whom" type="text" value="УВД Великого Новгорода">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customer-data__item">
-                                        <h3 class="customer-data__title">Контактные данные</h3>
-                                        <div class="fields-wrap">
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-tel">Номер телефона</label>
-                                                    <input id="customer-tel" class="phone-input"  type="tel" value="8(795) 332-54-52">
-                                                </div>
-                                            </div>
-                                            <div class="fields-wrap__item fields-wrap__item_size-md">
-                                                <div class="gl-field">
-                                                    <label for="customer-mail">Электронная почта</label>
-                                                    <input id="customer-mail" type="email" value="email@example.com">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customer-data__item">
-                                        <button class="btn" type="submit">Далее</button>
-                                    </div>
-                                </form>
+                    <div class="personal-account">
+                        <div class="user-widget">
+                            <div class="user-info">
+                                <div class="user-info__photo">
+                                    <img id="userPhoto" src="img/src/user-demo-img.jpg" alt="photo">
+                                </div>
+                                <div class="user-info__description">
+                                    <span class="user-info__name">Иванов Иван</span>
+                                    <input type="file" id="fileInput" onchange="loadPhoto()">
+                                    <label for="fileInput" class="user-info__load">Загрузить фото</label>
+                                </div>
                             </div>
-                        </div> 
-                        <div class="result-widget result-widget_white-bg">
-                            <span class="result-widget__title">Ваш заказ</span>
-                            <div class="result-widget__price-panel">
-                                <span class="result-widget__main-price">9 999 ₽</span>
-                                <del>10 999 ₽</del>
+                            <nav class="account-nav">
+                                <ul>
+                                    <li class="active">
+                                        <span>Визиты в клинику</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Мои заказы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Данные пациента</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Уведомления<small class="account-nav__number">2</small></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Выход</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="manager-info">
+                                <div class="manager-info__top-panel">
+                                    <div class="manager-panel__photo">
+                                        <img src="img/src/manager-photo.jpg" alt="photo">
+                                    </div>
+                                    <div class="manager-panel__description">
+                                        <span class="manager-panel__name">Иванов Иван</span>
+                                        <span class="manager-panel__post">Ваш менеджер</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="manager-info__phone">
+                                    <img src="img/icons/phone-i.svg" alt="photo">
+                                    <span>+7 (495) 431-50-50</span>
+                                </a>
                             </div>
-                            <ul class="checklist">
-                                <li>
-                                    <span class="checklist__title">Товары</span>
-                                    <div class="checklist__border-bt"></div>
-                                    <span class="checklist__price">3 300 ₽</span>
-                                </li>
-                                <li>
-                                    <span class="checklist__title">Услуги</span>
-                                    <div class="checklist__border-bt"></div>
-                                    <span class="checklist__price">3 300 ₽</span>
-                                </li>
-                            </ul>
-                            <div class="promo-code">
-                                <form>
-                                    <input type="text" placeholder="Промокод">
-                                    <button class="btn btn_white-color" type="submit">Применить</button>
-                                </form>
+                        </div>
+                        <div class="personal-account__description">
+                            <a href="#" class="personal-account__back">Назад</a>
+                            <h1 class="big-title">Визит от 10 ноября 2023</h1>
+                            <div class="visits-info">
+                                <div class="specialist-panel">
+                                    <div class="specialist-panel__photo">
+                                        <a href="#">
+                                            <img src="img/src/specialist-img-1.jpg" alt="photo">
+                                        </a>
+                                    </div>
+                                    <div class="specialist-panel__description">
+                                        <div class="specialist-panel__left-col">
+                                            <div class="specialist-panel__top-col">
+                                                <div class="single-rate">
+                                                    <img src="img/icons/star-act.svg" alt="star">
+                                                    <span>4,9</span>
+                                                </div>
+                                                <span class="reviews-info">19 отзывов</span>
+                                                <span class="experience">7 лет опыта</span>
+                                            </div>
+                                            <h3 class="specialist-panel__title">
+                                                <a href="#">Абалоидзе Магули</a>
+                                            </h3>
+                                            <span class="specialist-panel__post">Врач подолог</span>
+                                        </div>
+                                        <div class="specialist-panel__right-col">
+                                            <a href="#" class="btn">Записаться на повторный приём</a>
+                                            <a href="#" class="download-link">
+                                                <img src="img/icons/download.svg">
+                                                <span>Скачать заключение</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="visits-info__title">Состав заказа</h3>
+                                <ul class="checklist">
+                                    <li>
+                                        <span class="checklist__title">Очный приём врача-подолога первичный</span>
+                                        <div class="checklist__border-bt"></div>
+                                        <span class="checklist__price">3 300 ₽</span>
+                                    </li>
+                                    <li>
+                                        <span class="checklist__title">Педикюр эстетический</span>
+                                        <div class="checklist__border-bt"></div>
+                                        <span class="checklist__price">3 300 ₽</span>
+                                    </li>
+                                </ul>
+                                <h3 class="visits-info__title">Рекомендации</h3>
+                                <p>Благодаря уникальным конструктивным особенностям ортопедические стельки ORTO PROFESSIONAL Optimum Green обладают способностью к персональной адаптации и являются прекрасной альтернативой индивидуальным стелькам.</p>
+                                <h3 class="visits-info__title">Фото до и после</h3>
+                                <div class="photos">
+                                    <div class="photos__item">
+                                        <img src="img/src/img-1.jpg" alt="photo">
+                                    </div>
+                                    <div class="photos__item">
+                                        <img src="img/src/img-2.jpg" alt="photo">
+                                    </div>
+                                </div>
+                                <h3 class="visits-info__title">Динамика лечения</h3>
+                                <p>Благодаря уникальным конструктивным особенностям ортопедические стельки ORTO PROFESSIONAL Optimum Green обладают способностью к персональной адаптации и являются прекрасной альтернативой индивидуальным стелькам.</p>
+                                <a href="#" class="btn">Свяжитесь со мной</a>
                             </div>
                         </div>
                     </div>
