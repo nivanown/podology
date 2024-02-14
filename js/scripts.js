@@ -343,6 +343,48 @@ $(".filter-accordion__settings").each(function() {
   });
 });
 
+/*- date 
+var input = document.querySelectorAll('.date-input')[0];
+
+var dateInputMask = function dateInputMask(elm) {
+  elm.addEventListener('keypress', function(e) {
+    if ((e.key < '0' || e.key > '9') && e.key !== 'Backspace') {
+      e.preventDefault();
+    }
+
+    var len = elm.value.length;
+
+    if (len === 1 || len === 3) {
+      if (e.key === '.') {
+        e.preventDefault();
+      }
+    }
+
+    if (len === 2 || len === 5) {
+      elm.value += '.';
+    }
+  });
+};
+
+dateInputMask(input);-*/
+
+/*- user-info -*/
+function loadPhoto() {
+  var userPhoto = document.getElementById('userPhoto');
+  var fileInput = document.getElementById('fileInput');
+  
+  var file = fileInput.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+      userPhoto.src = e.target.result;
+  };
+
+  if (file) {
+      reader.readAsDataURL(file);
+  }
+}
+
 /*- counter -*/
 class Counter {
   constructor(container) {
