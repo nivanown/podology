@@ -624,6 +624,7 @@ textarea::-webkit-input-placeholder {
 .main-nav__services {
   position: relative;
   padding: 0 0 0 32px;
+  cursor: pointer;
   }
 
 .main-nav__services:before {
