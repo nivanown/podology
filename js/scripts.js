@@ -1,4 +1,33 @@
-﻿/*- hero-slider -*/
+﻿/*- services-dropdown -*/
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleButton = document.querySelector('.main-nav__services');
+  var contentBlock = document.querySelector('.services-dropdown');
+
+  toggleButton.addEventListener('click', function() {
+    toggleButton.classList.toggle('close');
+    contentBlock.classList.toggle('show');
+  });
+});
+
+/*- services-dropdown-tabs -*/
+const servicesTabs = document.querySelectorAll('.services-dropdown [data-tab-target]');
+const servicesTabContents = document.querySelectorAll('.services-dropdown [data-tab-content]');
+
+servicesTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget);
+    servicesTabContents.forEach(tabContent => {
+      tabContent.classList.remove('active');
+    });
+    servicesTabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    target.classList.add('active');
+  });
+});
+
+/*- hero-slider -*/
 var swiper = new Swiper('.hero-slider', {
   autoplay: {
     delay: 5500,
@@ -343,30 +372,19 @@ $(".filter-accordion__settings").each(function() {
   });
 });
 
-/*- date 
-var input = document.querySelectorAll('.date-input')[0];
-
-var dateInputMask = function dateInputMask(elm) {
-  elm.addEventListener('keypress', function(e) {
-    if ((e.key < '0' || e.key > '9') && e.key !== 'Backspace') {
-      e.preventDefault();
-    }
-
-    var len = elm.value.length;
-
-    if (len === 1 || len === 3) {
-      if (e.key === '.') {
-        e.preventDefault();
-      }
-    }
-
-    if (len === 2 || len === 5) {
-      elm.value += '.';
-    }
-  });
-};
-
-dateInputMask(input);-*/
+/*- date -*/
+var swiper = new Swiper(".product-slider__sm", {
+  spaceBetween: 20,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".product-slider__big", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper,
+  },
+});
 
 /*- user-info -*/
 function loadPhoto() {
@@ -429,6 +447,18 @@ document.addEventListener('DOMContentLoaded', () => {
   counterContainers.forEach(container => {
     new Counter(container);
   });
+});
+
+/*- modal -*/
+const myModal = new HystModal({
+  closeOnEsc: true,
+  backscroll: true,
+  afterClose: function(modal){
+    let videoframe = modal.openedWindow.querySelector('iframe');
+    if(videoframe){
+        videoframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    }
+  },        
 });
 
 
