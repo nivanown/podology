@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/global.css" media="all"/>
     <link rel="stylesheet" href="css/main.css" media="all"/>
     <link rel="stylesheet" href="css/swiper-bundle.min.css" media="all"/>
+    <link rel="stylesheet" href="css/hystmodal.min.css" media="all"/>
     <link rel="stylesheet" href="css/responsive.css" media="all"/>
 
     <link href="favicon.ico" rel="shortcut icon"/>
@@ -28,7 +29,7 @@
             <div class="header__container">
                 <div class="header__top-panel">
                     <div class="header__left-col">
-                        <span class="cities-link">
+                        <span class="cities-link" data-hystmodal="#cities">
                             <img src="img/icons/cities.svg" alt="icon">
                             <span>Москва</span>
                         </span>
@@ -49,8 +50,8 @@
                             </a>
                         </div>
                         <div class="connection-panel">
-                            <a href="#" class="btn btn_sm-size">Онлайн запись</a>
-                            <a href="#" class="btn btn_sm-size btn_transparent-color">Обратный звонок</a>
+                            <a href="#" class="btn btn_sm-size" data-hystmodal="#online-appointment">Онлайн запись</a>
+                            <a href="#" class="btn btn_sm-size btn_transparent-color" data-hystmodal="#callback">Обратный звонок</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@
                         <button class="search-form__btn" type="submit">Поиск</button>
                     </div>
                     <div class="user-panel">
-                        <a href="#" class="user-panel__item">
+                        <a href="#" class="user-panel__item" data-hystmodal="#login-site">
                             <img src="img/icons/account.svg" alt="icon">
                             <span class="user-panel__text">Кабинет</span>
                         </a>
@@ -100,6 +101,19 @@
                             </li>
                             <li>
                                 <a href="#">Каталог товаров</a>
+                                <div class="main-nav__dropdown">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ортопедические стельки</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Инструменты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Средства ухода</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <a href="#">Партнерам</a>
@@ -113,6 +127,723 @@
             </div>
         </header>
         <!-- header end -->
+
+        <!-- services-dropdown Start -->
+        <div class="services-dropdown">
+            <div class="services-dropdown__container">
+                <div class="services-dropdown__in">
+                    <nav class="services-dropdown__nav">
+                        <ul>
+                            <li class="active" data-tab-target="#services-tab-1">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-1.svg" alt="icon">
+                                <span>Подология</span>
+                            </li>
+                            <li data-tab-target="#services-tab-2">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-2.svg" alt="icon">
+                                <span>Ортопедия и травмотология</span>
+                            </li>
+                            <li data-tab-target="#services-tab-3">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-3.svg" alt="icon">
+                                <span>Дерматология</span>
+                            </li>
+                            <li data-tab-target="#services-tab-4">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-4.svg" alt="icon">
+                                <span>Хирургия</span>
+                            </li>
+                            <li data-tab-target="#services-tab-5">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-5.svg" alt="icon">
+                                <span>Лабораторная диагностика</span>
+                            </li>
+                            <li data-tab-target="#services-tab-6">
+                                <img class="services-dropdown__icon" src="img/icons/services-tab-i-6.svg" alt="icon">
+                                <span>Онлайн консультации</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="services-dropdown__content">
+                        <div id="services-tab-1" class="services-dropdown__item active" data-tab-content="services-tab-1">
+                            <h3 class="services-dropdown__title">Подология</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="services-tab-2" class="services-dropdown__item" data-tab-content="services-tab-2">
+                            <h3 class="services-dropdown__title">Ортопедия и травмотология</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="services-tab-3" class="services-dropdown__item" data-tab-content="services-tab-3">
+                            <h3 class="services-dropdown__title">Дерматология</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="services-tab-4" class="services-dropdown__item" data-tab-content="services-tab-4">
+                            <h3 class="services-dropdown__title">Хирургия</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="services-tab-5" class="services-dropdown__item" data-tab-content="services-tab-5">
+                            <h3 class="services-dropdown__title">Лабораторная диагностика</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="services-tab-6" class="services-dropdown__item" data-tab-content="services-tab-6">
+                            <h3 class="services-dropdown__title">Онлайн консультации</h3>
+                            <ul class="services-list">
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Консультация травматолога-ортопеда</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ортопедические стельки для детей</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Бурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Стельки и ортозы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Удаление новообразований</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Пяточная шпора</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Кинезиотейпирование</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Коксартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Ахиллобурсит</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Гонартроз</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Вальгусная деформация стопы</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3 class="services-list__title">
+                                        <a href="#">Внутрисуставные инъекции</a>
+                                    </h3>
+                                    <div class="services-list__right-col">
+                                        <span class="services-list__price">4 900 ₽</span>
+                                        <a href="#" class="more-arrow">Подробнее</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- services-dropdown end -->
 
         <!-- main Start -->
         <main class="main">
@@ -575,11 +1306,406 @@
     </div>   
     <!-- wrapper end -->
 
+    <!-- cities modal Start -->
+    <div id="cities" class="hystmodal hystmodal_big-size" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <h3 class="hystmodal__title">Ваш город: Москва</h3>
+                    <div class="choosing-city">
+                        <input class="input_gray-color input_placeholder-gray-color" type="text" placeholder="Введите название вашего города">
+                        <div class="cities-row">
+                            <div class="cities-row__col">
+                                <ul>
+                                    <li>
+                                        <a href="#">Волгоград</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Воронеж</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Екатеринбург</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ижевск</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Казань</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Калининград</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cities-row__col">
+                                <ul>
+                                    <li>
+                                        <a href="#">Кемерово</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Кострома</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Красноярск</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Магнитогорск</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Москва</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Набережные челны</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cities-row__col">
+                                <ul>
+                                    <li>
+                                        <a href="#">Новосибирск</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Нижний Новгород</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Омск</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пенза</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Пермь</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ростов-на-Дону</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cities-row__col">
+                                <ul>
+                                    <li>
+                                        <a href="#">Самара</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Санкт-Петербург</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Тюмень</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Уфа</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Челябинск</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cities modal end -->
+
+    <!-- online-appointment modal Start -->
+    <div id="online-appointment" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <h3 class="hystmodal__title">Онлайн запись</h3>
+                    <p class="hystmodal__sub-title">Мы перезвоним вам для подтверждения записи</p>
+                    <div class="hystmodal__form">
+                        <form>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="clinic">Клиника</label>
+                                    <div class="select">
+                                        <input id="clinic" class="select-field" value="" type="text" placeholder="Выберите клинику" readonly="">
+                                        <span class="select__arrow"></span>
+                                        <ul class="select-list">
+                                            <li>Клиника 1</li>
+                                            <li>Клиника 2</li>
+                                            <li>Клиника 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="doctor">Врач</label>
+                                    <div class="select">
+                                        <input id="doctor" class="select-field" type="text" value="" placeholder="Выберите врача" readonly="">
+                                        <span class="select__arrow"></span>
+                                        <ul class="select-list">
+                                            <li>Врач 1</li>
+                                            <li>Врач 2</li>
+                                            <li>Врач 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="date-p">Дата приёма</label>
+                                    <div class="select">
+                                        <input id="date-p" class="select-field" type="text" value="" placeholder="Желаемая дата приёма" readonly="">
+                                        <span class="select__arrow"></span>
+                                        <ul class="select-list">
+                                            <li>10 декабря 2024</li>
+                                            <li>11 декабря 2024</li>
+                                            <li>12 декабря 2024</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="time-panel">
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-1" type="radio" name="time">
+                                            <label for="time-1">10:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-2" type="radio" name="time">
+                                            <label for="time-2">11:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-3" type="radio" name="time" disabled="disabled">
+                                            <label for="time-3">12:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-4" type="radio" name="time">
+                                            <label for="time-4">13:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-5" type="radio" name="time">
+                                            <label for="time-5">14:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-6" type="radio" name="time">
+                                            <label for="time-6">15:00</label>
+                                        </div>
+                                    </div>
+                                    <div class="time-panel__item">
+                                        <div class="time-box">
+                                            <input id="time-7" type="radio" name="time">
+                                            <label for="time-7">16:00</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <h4 class="hystmodal__sm-title">Данные пациента</h4>
+                                <div class="gl-field">
+                                    <label for="phone-number-4">Номер телефона</label>
+                                    <input id="phone-number-4" class="phone-input" type="tel" placeholder="Введите ваш номер">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="name-o">Имя</label>
+                                    <input id="name-o" type="text" placeholder="Введите ваше имя">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn_full-size" type="submit">Записаться</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- online-appointment modal end -->
+
+    <!-- callback modal Start -->
+    <div id="callback" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <div class="hystmodal__top-panel">
+                        <h3 class="hystmodal__title">Закажите<br> обратный звонок</h3>
+                        <p class="hystmodal__sub-title">Мы перезвоним в течение 5 минут</p>
+                        <div class="hystmodal__main-icon">
+                            <img src="img/icons/callback.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="hystmodal__form">
+                        <form>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="phone-number">Номер телефона</label>
+                                    <input id="phone-number" class="phone-input" type="tel" placeholder="Введите ваш номер">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="phone-number">Имя</label>
+                                    <input id="phone-number" type="text" placeholder="Введите ваше имя">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn_full-size" type="submit" data-hystmodal="#notification">Заказать звонок</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- callback modal end -->
+
+    <!-- notification modal Start -->
+    <div id="notification" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <div class="notification">
+                        <div class="notification__photo">
+                            <img src="img/src/notification-img.png" alt="photo">
+                        </div>
+                        <h3 class="hystmodal__title">Спасибо за вашу заявку!</h3>
+                        <p class="hystmodal__sub-title">Мы перезвоним в течение 5 минут</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- notification modal end -->
+
+    <!-- login-site modal Start -->
+    <div id="login-site" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <h3 class="hystmodal__title">Войти на сайт</h3>
+                    <p class="hystmodal__sub-title">Чтобы продолжить, укажите номер телефона.</p>
+                    <div class="hystmodal__form">
+                        <form>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="phone-number-2">Номер телефона</label>
+                                    <input id="phone-number-2" class="phone-input" type="tel" placeholder="Введите ваш номер">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn_full-size" type="submit" data-hystmodal="#code-modal">Далее</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <a href="#" class="vk-btn">
+                        <span class="vk-btn__icon">
+                            <img src="img/icons/vk-icon.svg" alt="icon">
+                        </span>
+                        <span class="vk-btn__text">
+                            <span>Продолжить как Иван</span>
+                            <small>+7 ··· ··· ·· 92</small>
+                        </span>
+                        <img class="vk-btn__photo" src="img/src/user-photo.jpg" alt="photo">
+                    </a>
+                    <p class="hystmodal__sm-text">Нажимая на кнопку, Вы даете согласие на обработку своих персональных данных и соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login-site modal end -->
+
+    <!-- code modal Start -->
+    <div id="code-modal" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <h3 class="hystmodal__title">Теперь введите код</h3>
+                    <p class="hystmodal__sub-title">Мы отправили SMS с одноразовым кодом</p>
+                    <div class="hystmodal__form">
+                        <form>
+                            <fieldset>
+                                <div class="code-panel">
+                                    <input class="input_gray-color" type="text" value="1">
+                                    <input class="input_gray-color" type="text" value="2">
+                                    <input class="input_gray-color" type="text" value="3">
+                                    <input class="input_gray-color" type="text" value="4">
+                                    <input class="input_gray-color" type="text" value="5">
+                                    <input class="input_gray-color" type="text" value="6">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn_full-size" type="submit" data-hystmodal="#notification">Далее</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- code modal end -->
+
+    <!-- ask-question modal Start -->
+    <div id="ask-question" class="hystmodal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button class="hystmodal__close" data-hystclose>Закрыть</button>
+                <div class="hystmodal__styled">
+                    <h3 class="hystmodal__title">Оставьте ваши данные</h3>
+                    <p class="hystmodal__sub-title">Чтобы получить уведомление, когда врач<br> ответит на ваш вопрос</p>
+                    <div class="hystmodal__info-text">
+                        <img src="img/icons/time-i.svg" alt="icon">
+                        <span>Обычно врачи отвечают в течение 1 дня</span>
+                    </div>
+                    <div class="hystmodal__form">
+                        <form>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="name-d">Имя</label>
+                                    <input id="name-d" type="text" placeholder="Введите ваше имя">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="email-d">Электронная почта</label>
+                                    <input id="email-d" type="email" placeholder="email@example.com">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="gl-field">
+                                    <label for="phone-number-3">Номер телефона</label>
+                                    <input id="phone-number-3" class="phone-input" type="tel" placeholder="Введите ваш номер">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn_full-size" type="submit">Отправить</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ask-question modal end -->
+
     <!-- jQuery libs -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
     <!-- Plugin scripts -->
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/hystmodal.min.js"></script>
     <script type="text/javascript" src="js/mask.js"></script>
 
     <!-- Scripts -->
