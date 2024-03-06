@@ -1390,6 +1390,20 @@ button.hystmodal__close {
 
 }
 
+/* 400 */
+@media (max-width: 400px) {
+
+.hero-slider__title {
+	font-size: 26px;
+	line-height: 26px;
+	}
+
+.hero-section__img {
+	width: 200px;
+	}
+
+}
+
 /* 375 */
 @media (max-width: 375px) {
 
