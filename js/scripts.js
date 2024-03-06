@@ -9,6 +9,45 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+/*- mobile menu -*/
+let toggleBtn = document.querySelector('.menu-btn');
+let navBar = document.querySelector('.mobile-dropdown');
+toggleBtn.addEventListener('click', function () {
+  toggleBtn.classList.toggle('close');
+  navBar.classList.toggle('show');
+});
+
+/*- mobile-panel -*/
+document.getElementById('services-link').addEventListener('click', function() {
+  document.getElementById('mobile-modal-1').classList.add('show');
+  document.getElementById('mobile-modal-2').classList.remove('show');
+  document.getElementById('services-link').classList.add('active');
+  document.getElementById('search-link').classList.remove('active');
+  document.querySelector('body').classList.add('no-scroll');
+});
+
+document.getElementById('search-link').addEventListener('click', function() {
+  document.getElementById('mobile-modal-2').classList.add('show');
+  document.getElementById('mobile-modal-1').classList.remove('show');
+  document.getElementById('search-link').classList.add('active');
+  document.getElementById('services-link').classList.remove('active');
+  document.querySelector('body').classList.add('no-scroll');
+});
+
+var closeButtons = document.querySelectorAll('.mobile-modal__close-btn');
+closeButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    document.querySelector('body').classList.remove('no-scroll');
+    document.querySelectorAll('.mobile-modal').forEach(function(modal) {
+      modal.classList.remove('show');
+    });
+
+    document.querySelectorAll('.mobile-sm-nav__item').forEach(function(item) {
+      item.classList.remove('active');
+    });
+  });
+});
+
 /*- services-dropdown-tabs -*/
 const servicesTabs = document.querySelectorAll('.services-dropdown [data-tab-target]');
 const servicesTabContents = document.querySelectorAll('.services-dropdown [data-tab-content]');
@@ -33,6 +72,7 @@ var swiper = new Swiper('.hero-slider', {
     delay: 5500,
     disableOnInteraction: false,
   },
+  autoHeight: true,
   loop: true,
   speed: 1000,
   slidesPerView: 1,
@@ -460,6 +500,5 @@ const myModal = new HystModal({
     }
   },        
 });
-
 
 
