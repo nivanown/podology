@@ -1402,6 +1402,21 @@ button.hystmodal__close {
 	width: 200px;
 	}
 
+.departments__item a {
+	padding: 13px;
+	}
+
+.departments__title {
+	font-size: 13px;
+	line-height: 16px;
+	}
+
+.departments__item img {
+	width: 120px;
+	object-fit: cover;
+	object-position: left top;
+	}
+
 }
 
 /* 375 */
@@ -1423,21 +1438,6 @@ button.hystmodal__close {
 
 .hero-section__img {
 	width: 150px;
-	}
-
-.departments__item a {
-	padding: 13px;
-	}
-
-.departments__title {
-	font-size: 13px;
-	line-height: 16px;
-	}
-
-.departments__item img {
-	width: 120px;
-	object-fit: cover;
-	object-position: left top;
 	}
 
 .mobile-sm-nav {
