@@ -59,8 +59,10 @@
                     <div class="logo">
                         <a href="#">
                             <img src="img/icons/logo.svg" alt="logo">
-                            <span>Подология</span>
-                            <small>сеть центров<br> гигиены и эстетики</small>
+                            <span class="logo__description">
+                                <span class="logo__text">Подология</span>
+                                <small class="logo__sm-text">сеть центров<br> гигиены и эстетики</small>
+                            </span>
                         </a>
                     </div>
                     <div class="search-form">
@@ -76,6 +78,11 @@
                             <img src="img/icons/shopping-cart.svg" alt="icon">
                             <span class="user-panel__text">Корзина</span>
                         </a>
+                    </div>
+                    <div class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
                 <div class="header__bottom-panel">
@@ -845,6 +852,188 @@
         </div>
         <!-- services-dropdown end -->
 
+        <!-- mobile-dropdown Start -->
+        <div class="mobile-dropdown">
+            <div class="mobile-dropdown__container">
+                <nav class="mobile-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#">Специалисты</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Пациентам</a>
+                        </li>
+                        <li>
+                            <a href="#">Каталог товаров</a>
+                        </li>
+                        <li>
+                            <a href="#">Партнерам</a>
+                        </li>
+                        <li>
+                            <a href="#">Франшиза</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-phone">
+                    <img src="img/icons/mobile-phone.svg" alt="icon">
+                    <div class="mobile-phone__info">
+                        <a class="mobile-phone__number"href="tel:+7 (495) 431-50-50">+7 (495) 431-50-50</a>
+                        <span class="working-hours">Пн-Пт 10:00 - 21:00</span>
+                    </div>
+                </div>
+                <div class="mobile-messengers">
+                    <div class="mobile-messengers__item">
+                        <a href="#">
+                            <img src="img/icons/telegram.svg" alt="icon">
+                            <span class="mobile-messengers__text">Telegram</span>
+                        </a>
+                    </div>
+                    <div class="mobile-messengers__item">
+                        <a href="#">
+                            <img src="img/icons/whatsapp.svg" alt="icon">
+                            <span class="mobile-messengers__text">Whatsapp</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="mailto:info@podologiya.clinic" class="mail">
+                    <img src="img/icons/mail.svg" alt="icon">
+                    <span>info@podologiya.clinic</span>
+                </a>
+                <div class="mobile-phone__btn-panel">
+                    <a href="#" class="btn" data-hystmodal="#online-appointment">Онлайн запись</a>
+                    <a href="#" class="btn btn_transparent-color-green" data-hystmodal="#callback">Обратный звонок</a>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-dropdown end -->
+
+        <!-- mobile-panel Start -->
+        <div class="mobile-panel">
+            <div class="mobile-sm-nav">
+                <div id="services-link" class="mobile-sm-nav__item">
+                    <span class="mobile-sm-nav__icon">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.3 6C10.3 3.79086 8.50919 2 6.30005 2C4.09091 2 2.30005 3.79086 2.30005 6C2.30005 8.20914 4.09091 10 6.30005 10C8.50919 10 10.3 8.20914 10.3 6Z" stroke="#00B368" stroke-width="1.5"/>
+                            <path d="M10.3 18C10.3 15.7909 8.50919 14 6.30005 14C4.09091 14 2.30005 15.7909 2.30005 18C2.30005 20.2091 4.09091 22 6.30005 22C8.50919 22 10.3 20.2091 10.3 18Z" stroke="#00B368" stroke-width="1.5"/>
+                            <path d="M22.3 6C22.3 3.79086 20.5092 2 18.3 2C16.0909 2 14.3 3.79086 14.3 6C14.3 8.20914 16.0909 10 18.3 10C20.5092 10 22.3 8.20914 22.3 6Z" stroke="#00B368" stroke-width="1.5"/>
+                            <path d="M22.3 18C22.3 15.7909 20.5092 14 18.3 14C16.0909 14 14.3 15.7909 14.3 18C14.3 20.2091 16.0909 22 18.3 22C20.5092 22 22.3 20.2091 22.3 18Z" stroke="#00B368" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                    <span class="mobile-sm-nav__text">Услуги</span>
+                </div>
+                <div id="search-link" class="mobile-sm-nav__item">
+                    <span class="mobile-sm-nav__icon">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.4 17.5L22.9 22" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.9 11C20.9 6.02944 16.8706 2 11.9 2C6.92946 2 2.90002 6.02944 2.90002 11C2.90002 15.9706 6.92946 20 11.9 20C16.8706 20 20.9 15.9706 20.9 11Z" stroke="#9CA3AF" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="mobile-sm-nav__text">Поиск</span>
+                </div>
+                <div class="mobile-sm-nav__item">
+                    <a href="#">
+                        <span class="mobile-sm-nav__icon">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.07757 15.4816C5.6628 16.324 1.95336 18.0441 4.21266 20.1966C5.31631 21.248 6.54549 22 8.09087 22H16.9091C18.4545 22 19.6837 21.248 20.7873 20.1966C23.0466 18.0441 19.3372 16.324 17.9224 15.4816C14.6048 13.5061 10.3952 13.5061 7.07757 15.4816Z" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 6.5C17 8.98528 14.9853 11 12.5 11C10.0147 11 8 8.98528 8 6.5C8 4.01472 10.0147 2 12.5 2C14.9853 2 17 4.01472 17 6.5Z" stroke="#9CA3AF" stroke-width="1.5"/>
+                            </svg>
+                        </span>
+                        <span class="mobile-sm-nav__text">Кабинет</span>
+                    </a>
+                </div>
+                <div class="mobile-sm-nav__item">
+                    <a href="#">
+                        <span class="mobile-sm-nav__icon">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.16162 15.1933L3.52685 13.1219C3.95853 10.6736 4.17437 9.44952 5.02912 8.72476C5.88386 8 7.11168 8 9.56732 8H14.6326C17.0883 8 18.3161 8 19.1708 8.72476C20.0256 9.44952 20.2414 10.6736 20.6731 13.1219L21.0383 15.1933C21.6357 18.5811 21.9344 20.275 21.0146 21.3875C20.0949 22.5 18.3959 22.5 14.9979 22.5H9.20208C5.80403 22.5 4.10501 22.5 3.18531 21.3875C2.2656 20.275 2.56427 18.5811 3.16162 15.1933Z" stroke="#9CA3AF" stroke-width="1.5"/>
+                                <path d="M7.59998 8L7.76779 5.98618C7.95555 3.73306 9.83905 2 12.1 2C14.3609 2 16.2444 3.73306 16.4322 5.98618L16.6 8" stroke="#9CA3AF" stroke-width="1.5"/>
+                                <path d="M15.1 11C14.97 12.4131 13.6656 13.5 12.1 13.5C10.5343 13.5 9.23 12.4131 9.09998 11" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span class="mobile-sm-nav__text">Корзина</span>
+                    </a>
+                </div>
+                <div class="mobile-sm-nav__item" data-hystmodal="#callback">
+                    <span class="mobile-sm-nav__icon">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.47764 11.9424C3.52961 10.2893 3.07186 8.93948 2.79585 7.57121C2.38763 5.54758 3.32182 3.57081 4.86939 2.30947C5.52346 1.77638 6.27324 1.95852 6.66002 2.6524L7.5332 4.21891C8.2253 5.46057 8.57135 6.08139 8.50272 6.73959C8.43408 7.39779 7.96738 7.93386 7.03399 9.00601L4.47764 11.9424ZM4.47764 11.9424C6.39652 15.2883 9.40785 18.3013 12.7577 20.2224M12.7577 20.2224C14.4107 21.1704 15.7605 21.6282 17.1288 21.9042C19.1524 22.3124 21.1292 21.3782 22.3905 19.8306C22.9236 19.1766 22.7415 18.4268 22.0476 18.04L20.4811 17.1668C19.2394 16.4747 18.6186 16.1287 17.9604 16.1973C17.3022 16.2659 16.7662 16.7326 15.694 17.666L12.7577 20.2224Z" stroke="#9CA3AF" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M14.7 6.83185C16.1233 7.43624 17.2638 8.57677 17.8682 10M15.354 2C18.8912 3.02076 21.6791 5.80852 22.7 9.34563" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span class="mobile-sm-nav__text">Звонок</span>
+                </div>
+            </div>
+            <div id="mobile-modal-1" class="mobile-modal">
+                <span class="mobile-modal__close-btn">Закрыть</span>
+                <h4 class="mobile-modal__title">Наши услуги</h4>
+                <div class="mobile-modal__content">
+                    <nav class="mobile-services-nav">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-1.svg" alt="icon">
+                                    <span>Подология</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-2.svg" alt="icon">
+                                    <span>Ортопедия и травмотология</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-3.svg" alt="icon">
+                                    <span>Дерматология</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-4.svg" alt="icon">
+                                    <span>Хирургия</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-5.svg" alt="icon">
+                                    <span>Лабораторная диагностика</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/services-tab-i-6.svg" alt="icon">
+                                    <span>Онлайн консультации</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="mobile-modal-2" class="mobile-modal">
+                <span class="mobile-modal__close-btn">Закрыть</span>
+                <h4 class="mobile-modal__title">Поиск по сайту</h4>
+                <div class="mobile-modal__content">
+                    <div class="search-form">
+                        <input type="text" placeholder="Поиск по услугам, симптомам, болезням" />
+                        <button class="search-form__btn" type="submit">Поиск</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-panel end -->
+
         <!-- main Start -->
         <main class="main">
             <section class="main-section">
@@ -1518,8 +1707,8 @@
                             <div class="footer__logo logo">
                                 <a href="#">
                                     <img src="img/icons/logo.svg" alt="logo">
-                                    <span>Подология</span>
-                                    <small>сеть центров<br> гигиены и эстетики</small>
+                                    <span class="logo__text">Подология</span>
+                                    <small class="logo__sm-text">сеть центров<br> гигиены и эстетики</small>
                                 </a>
                             </div>
                             <a href="#" class="btn">Онлайн запись</a>
