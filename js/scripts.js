@@ -18,20 +18,34 @@ toggleBtn.addEventListener('click', function () {
 });
 
 /*- mobile-panel -*/
+function toggleMobileModal(modalToShow, modalToHide, linkActive, linkInactive) {
+  const body = document.querySelector('body');
+  const showClass = 'show';
+  const activeClass = 'active';
+
+  modalToShow.classList.add(showClass);
+  modalToHide.classList.remove(showClass);
+  linkActive.classList.add(activeClass);
+  linkInactive.classList.remove(activeClass);
+  body.classList.add('no-scroll');
+}
+
 document.getElementById('services-link').addEventListener('click', function() {
-  document.getElementById('mobile-modal-1').classList.add('show');
-  document.getElementById('mobile-modal-2').classList.remove('show');
-  document.getElementById('services-link').classList.add('active');
-  document.getElementById('search-link').classList.remove('active');
-  document.querySelector('body').classList.add('no-scroll');
+  const mobileModal1 = document.getElementById('mobile-modal-1');
+  const mobileModal2 = document.getElementById('mobile-modal-2');
+  const servicesLink = document.getElementById('services-link');
+  const searchLink = document.getElementById('search-link');
+
+  toggleMobileModal(mobileModal1, mobileModal2, servicesLink, searchLink);
 });
 
 document.getElementById('search-link').addEventListener('click', function() {
-  document.getElementById('mobile-modal-2').classList.add('show');
-  document.getElementById('mobile-modal-1').classList.remove('show');
-  document.getElementById('search-link').classList.add('active');
-  document.getElementById('services-link').classList.remove('active');
-  document.querySelector('body').classList.add('no-scroll');
+  const mobileModal1 = document.getElementById('mobile-modal-1');
+  const mobileModal2 = document.getElementById('mobile-modal-2');
+  const servicesLink = document.getElementById('services-link');
+  const searchLink = document.getElementById('search-link');
+
+  toggleMobileModal(mobileModal2, mobileModal1, searchLink, servicesLink);
 });
 
 var closeButtons = document.querySelectorAll('.mobile-modal__close-btn');
@@ -44,6 +58,28 @@ closeButtons.forEach(function(button) {
 
     document.querySelectorAll('.mobile-sm-nav__item').forEach(function(item) {
       item.classList.remove('active');
+    });
+  });
+});
+
+/*- mobile-panel -*/
+const filterBtn = document.querySelector('.filter-btn');
+const catalogSidebar = document.querySelector('.catalog-col__sidebar');
+const body = document.querySelector('body');
+
+if (filterBtn && catalogSidebar && body) {
+  filterBtn.addEventListener('click', () => {
+    catalogSidebar.classList.add('show');
+    body.classList.add('no-scroll');
+  });
+}
+
+var closeButtons = document.querySelectorAll('.filter-close-btn');
+closeButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    document.querySelector('body').classList.remove('no-scroll');
+    document.querySelectorAll('.catalog-col__sidebar').forEach(function(modal) {
+      modal.classList.remove('show');
     });
   });
 });
@@ -423,6 +459,10 @@ var swiper2 = new Swiper(".product-slider__big", {
   spaceBetween: 10,
   thumbs: {
     swiper: swiper,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
